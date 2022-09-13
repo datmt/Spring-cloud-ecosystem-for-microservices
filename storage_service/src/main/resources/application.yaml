@@ -1,6 +1,6 @@
 server:
-  port: 8282
+  port: 8383
 
 spring:
   application:
-    name: billing_service
+    name: storage_service

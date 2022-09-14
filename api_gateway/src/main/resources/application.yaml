@@ -1,0 +1,28 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: api_gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: billing-service
+          uri: lb://billing-service
+          predicates:
+            - Path=/billing/**
+          filters:
+            - RewritePath=/billing/(?<path>.*), /$\{path}
+        - id: warehouse-service
+          uri: lb://warehouse-service
+          predicates:
+            - Path=/warehouse/**
+          filters:
+            - RewritePath=/warehouse/(?<path>.*), /$\{path}
+      filter:
+        retry:
+          enabled: true

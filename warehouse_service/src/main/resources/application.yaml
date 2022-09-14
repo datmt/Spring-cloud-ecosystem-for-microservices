@@ -7,8 +7,12 @@ spring:
   cloud:
     config:
       uri: http://localhost:8585
+      discovery:
+        enabled: true
+    loadbalancer:
+      enabled: true
   application:
-    name: warehouse_service
+    name: warehouse-service
 
 management:
   endpoints:

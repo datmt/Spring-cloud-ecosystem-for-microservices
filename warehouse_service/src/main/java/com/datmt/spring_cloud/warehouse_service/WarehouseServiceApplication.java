@@ -1,4 +1,4 @@
-package com.datmt.spring_cloud.storage_service;
+package com.datmt.spring_cloud.warehouse_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,9 +6,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class StorageServiceApplication {
+public class WarehouseServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StorageServiceApplication.class, args);
+        SpringApplication.run(WarehouseServiceApplication.class, args);
     }
 }

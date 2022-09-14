@@ -1,6 +1,0 @@
-server:
-  port: 8383
-
-spring:
-  application:
-    name: storage_service

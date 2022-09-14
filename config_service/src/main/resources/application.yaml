@@ -1,0 +1,17 @@
+server:
+  port: 8585
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+  application:
+    name: config_service
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh

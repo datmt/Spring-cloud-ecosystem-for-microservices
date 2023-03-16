@@ -1,4 +1,4 @@
-package com.datmt.spring_cloud.warehouse_service.controller;
+package com.datmt.spring_cloud.delivery_service.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;

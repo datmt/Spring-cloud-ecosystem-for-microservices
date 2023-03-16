@@ -17,12 +17,18 @@ spring:
             - Path=/billing/**
           filters:
             - RewritePath=/billing/(?<path>.*), /$\{path}
-        - id: warehouse-service
-          uri: lb://warehouse-service
+        - id: inventory-service
+          uri: lb://inventory-service
           predicates:
-            - Path=/warehouse/**
+            - Path=/inventory/**
           filters:
-            - RewritePath=/warehouse/(?<path>.*), /$\{path}
+            - RewritePath=/inventory/(?<path>.*), /$\{path}
+        - id: delivery-service
+          uri: lb://delivery-service
+          predicates:
+            - Path=/delivery/**
+          filters:
+            - RewritePath=/delivery/(?<path>.*), /$\{path}
       filter:
         retry:
           enabled: true

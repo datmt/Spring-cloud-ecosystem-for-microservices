@@ -15,7 +15,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>warehouse_service</module>
+        <module>inventory_service</module>
         <module>config_service</module>
         <module>api_gateway</module>
         <module>billing_service</module>

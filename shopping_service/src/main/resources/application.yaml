@@ -1,0 +1,12 @@
+server:
+  port: 8289
+
+spring:
+  application:
+    name: shopping-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health
